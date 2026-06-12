@@ -1,0 +1,217 @@
+{
+  "profile": {
+    "name": "Charitha Dissanayaka",
+    "mainRole": "IT Specialist",
+    "roles": [
+      "Software Engineer",
+      "IT Specialist",
+      "Web Designer"
+    ],
+    "bioSummary": "Hello, I'm",
+    "introHeadline": "I Develop Systems that Work",
+    "aboutText": "Pursuing a Computer Science degree with honors at NSBM Green University. Additionally, I am enrolled in a Higher Diploma in Software Engineering at Wayamba University, Kuliyapitiya. I am passionate about developing elegant solutions to complex engineering challenges.",
+    "profilePic": "/assets/profile-pic.jpg",
+    "aboutPic": "/assets/about-pic.jpg",
+    "cvUrl": "/assets/CV.pdf",
+    "personalInfo": {
+      "Name": "Charitha Dissanayaka",
+      "Date of birth": "November 21, 2001",
+      "Address": "No 53, Hewahata Rd, Rikillagaskada",
+      "Zip code": "20730",
+      "Email": "charithadissanayaka5290@gmail.com",
+      "Phone": "+94 77 302 8797"
+    },
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/charitha-dissanayaka-991188318/",
+      "github": "https://github.com/Dacalk",
+      "facebook": "https://web.facebook.com/profile.php?id=100084144096820",
+      "twitter": "https://twitter.com/",
+      "instagram": "https://www.instagram.com/_daca_lk_/"
+    }
+  },
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Exquzite  3.0",
+      "category": "Events",
+          "issuer": "HR Circle of NSBM",
+      "date": "June 2026",
+      "images": [
+        "/assets/Posts/Post 1/1720360817894.jpg",
+        "/assets/Posts/Post 1/1720360827331.jpg"
+      ],
+      "description": "Thrilled to have been part of the organizing committee for Exquzite 3.0, a dynamic quiz competition around companies, with a special focus on WIA Systems!",
+      "fullText": "This event provided a fantastic opportunity to observe WIA Systems in action and connect with the incredible professionals who work there. A big thank you to everyone who helped make this event a success. Looking forward to more such enriching experiences!"
+    },
+    {
+      "id": 2,
+      "title": "Honored at Google Flutter Badging Ceremony",
+      "category": "Badging Ceremony",
+      "issuer": "Google Academy",
+      "date": "May 2026",
+      "images": [
+        "/assets/achievements/ceremony_event.png",
+        "/assets/achievements/flutter_badge.png"
+      ],
+      "description": "Received the formal Flutter Application Developer credential at the official badging ceremony.",
+      "fullText": "The badging ceremony celebrates developers achieving advanced competence in Flutter and multi-platform native structures. Demonstrating robust application development, local state management strategies, and clean architecture patterns."
+    },
+    {
+      "id": 3,
+      "title": "Oracle Certified Java Developer Achievement",
+      "category": "Certification",
+      "issuer": "Oracle Corporation",
+      "date": "March 2026",
+      "images": [
+        "/assets/achievements/java_badge.png"
+      ],
+      "description": "Certified as a professional Java Developer, proving deep competence in object-oriented development and enterprise Java APIs.",
+      "fullText": "Validates deep understanding of core Java patterns, concurrent threads, JDBC structures, and modular software designs, establishing foundational skills for robust enterprise application engineering."
+    },
+    {
+      "id": 4,
+      "title": "Top Rank NSBM Academic Excellence Award",
+      "category": "Academic News",
+      "issuer": "NSBM Green University",
+      "date": "Awarded 2025",
+      "images": [
+        "/assets/achievements/academic_event.png",
+        "/assets/achievements/academic_badge.png"
+      ],
+      "description": "Awarded the Academic Excellence trophy and medal for top-rank performance in the Computer Science honor curriculum.",
+      "fullText": "Recognized by the university council for consecutive honors list GPA standing. Validating academic dedication, software research contributions, and consistent leadership in collegiate engineering societies."
+    }
+  ],
+  "experienceCards": [
+    {
+      "id": "exp",
+      "title": "Experience",
+      "subtitle": "1 Year",
+      "description": "HND in Software Engineering and freelancing experience.",
+      "icon": "Briefcase"
+    },
+    {
+      "id": "edu",
+      "title": "Education",
+      "subtitle": "Undergraduate",
+      "description": "B.Sc (Hons) in Computer Science - NSBM Green University.",
+      "icon": "GraduationCap"
+    }
+  ],
+  "skills": {
+    "frontend": [
+      {
+        "name": "React",
+        "level": "Experienced"
+      },
+      {
+        "name": "Flutter",
+        "level": "Experienced"
+      },
+      {
+        "name": "Python",
+        "level": "Basics"
+      },
+      {
+        "name": "Java",
+        "level": "Intermediate"
+      },
+      {
+        "name": "JavaSript",
+        "level": "Basic"
+      },
+      {
+        "name": ".NET",
+        "level": "Experienced"
+      }
+    ],
+    "backend": [
+      {
+        "name": "SQL",
+        "level": "Experienced"
+      },
+      {
+        "name": "Node JS",
+        "level": "Basics"
+      },
+      {
+        "name": "PHP",
+        "level": "Experienced"
+      },
+      {
+        "name": "GIT & GitHub",
+        "level": "Intermediate"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Travel Trove",
+      "description": "Developed a responsive full-stack booking system with secure user sessions, dynamic tour exploration, and normalized data management.",
+      "image": "/assets/Project/travel_trove.JPG",
+      "github": "https://github.com/Dacalk/Web-Project.git",
+      "demo": "https://traveltrove.free.nf/",
+      "tech": [
+        "HTML",
+        "Tailwind-CSS",
+        "JavaScript",
+        "PHP",
+        "MYSQL"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Learn X",
+      "description": "Developed a secure, role-based school management app with attendance tracking, MCQ modules, and a normalized 20+ table backend.",
+      "image": "assets/Project/learn_x.jpg",
+      "github": "https://github.com/Dacalk/Individual_LMS.git",
+      "demo": "https://github.com/Dacalk",
+      "tech": [
+        "PHP",
+        "SQL",
+        "Bootstrap",
+        "HTML",
+        "Tailwind-CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Fix on Go",
+      "description": "A well-known global brand of emergency roadside tire repair kits that temporarily seal flat tires so you can keep driving.",
+      "image": "public/assets/Project/fix_on_go.JPG",
+      "github": "https://github.com/Dacalk/FIxOnGo.git",
+      "demo": "https://github.com/Dacalk",
+      "tech": [
+        "Flutter",
+        "Google Auth",
+        "Firebase"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Web Design",
+      "description": "Creating visually stunning, fully responsive, and highly interactive user interfaces tailored to your specific brand identity."
+    },
+    {
+      "id": 2,
+      "title": "Software Engineering",
+      "description": "Building reliable, scalable back-end logic, API servers, and system models that ensure smooth app operations."
+    },
+    {
+      "id": 3,
+      "title": "Database Solutions",
+      "description": "Designing optimized relational SQL database structures, normalization profiles, and efficient indexing strategies."
+    }
+  ],
+  "contact": {
+    "email": "charithadissanayaka5290@gmail.com",
+    "phone": "+94 77 123 4567",
+    "location": "Kuliyapitiya, Sri Lanka",
+    "linkedin": "https://www.linkedin.com/in/charitha-dissanayaka-991188318/",
+    "github": "https://github.com/Dacalk"
+  }
+}
