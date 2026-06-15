@@ -42,14 +42,42 @@ export default function Contact({ contact }) {
     e.preventDefault();
     if (validate()) {
       setIsSubmitting(true);
-      // Simulate static backend API submission
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        // Reset success state after a delay
-        setTimeout(() => setSubmitted(false), 5000);
-      }, 1500);
+      
+      fetch(`https://formsubmit.co/ajax/${contact.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _captcha: 'false'
+        })
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Failed to submit form');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setIsSubmitting(false);
+          if (data.success === 'true' || data.success === true) {
+            setSubmitted(true);
+            setFormData({ name: '', email: '', subject: '', message: '' });
+            setTimeout(() => setSubmitted(false), 5000);
+          } else {
+            setErrors({ submit: 'Something went wrong. Please try again.' });
+          }
+        })
+        .catch((err) => {
+          console.error(err);
+          setIsSubmitting(false);
+          setErrors({ submit: 'Failed to send message. Please check your connection.' });
+        });
     }
   };
 
@@ -177,6 +205,7 @@ export default function Contact({ contact }) {
                     </>
                   )}
                 </button>
+                {errors.submit && <span className="error-text text-center" style={{ display: 'block', marginTop: '1rem' }}>{errors.submit}</span>}
               </form>
             )}
           </div>

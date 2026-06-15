@@ -1,8 +1,8 @@
 import React from 'react';
 import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 
-export default function Education() {
-  const educationData = [
+export default function Education({ education }) {
+  const defaultEducationData = [
     {
       id: 1,
       degree: "B.Sc (Hons) in Computer Science",
@@ -20,6 +20,8 @@ export default function Education() {
       description: "Specializing in software engineering disciplines, object-oriented systems development, databases, and secure programming practices."
     }
   ];
+
+  const educationData = education && education.length > 0 ? education : defaultEducationData;
 
   return (
     <section id="education" className="education-section reveal">

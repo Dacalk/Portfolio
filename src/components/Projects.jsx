@@ -18,27 +18,49 @@ export default function Projects({ projects }) {
         </div>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={project.id} className={`project-card reveal-stagger delay-${index + 1}`}>
-              <div className="project-img-wrapper">
-                <img src={project.image} alt={project.title} className="project-img" />
-                <div className="project-overlay">
-                  <div className="project-overlay-content">
-                    <h3 className="overlay-title">{project.title}</h3>
-                    <p className="overlay-desc">{project.description}</p>
-                    <div className="overlay-links">
-                      <a href={project.github} target="_blank" rel="noreferrer" className="overlay-link-btn" aria-label="GitHub Repository">
-                        <GithubIcon size={22} />
-                      </a>
-                      <a href={project.demo} target="_blank" rel="noreferrer" className="overlay-link-btn" aria-label="Live Demo">
-                        <ExternalLink size={22} />
-                      </a>
+          {projects.map((project, index) => {
+            const projectImg = project.image || project.backgroundImage || '/assets/photography-1.jpg';
+            const demoUrl = project.link || project.demo;
+            const projectTags = project.tags || project.tech || [];
+
+            return (
+              <div key={project.id} className={`project-card reveal-stagger delay-${index + 1}`}>
+                <div className="project-img-wrapper">
+                  <img src={projectImg} alt={project.title} className="project-img" />
+                  <div className="project-overlay">
+                    <div className="project-overlay-content">
+                      {project.category && (
+                        <span className="project-category">{project.category}</span>
+                      )}
+                      <h3 className="overlay-title">{project.title}</h3>
+                      <p className="overlay-desc">{project.description}</p>
+                      
+                      {projectTags.length > 0 && (
+                        <div className="project-tags">
+                          {projectTags.map((tag, tIdx) => (
+                            <span key={tIdx} className="project-tag">{tag}</span>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className="overlay-links">
+                        {project.github && (
+                          <a href={project.github} target="_blank" rel="noreferrer" className="overlay-link-btn" aria-label="GitHub Repository">
+                            <GithubIcon size={22} />
+                          </a>
+                        )}
+                        {demoUrl && (
+                          <a href={demoUrl} target="_blank" rel="noreferrer" className="overlay-link-btn" aria-label="Live Demo">
+                            <ExternalLink size={22} />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

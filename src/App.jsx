@@ -11,6 +11,9 @@ import Footer from './components/Footer';
 import Services from './components/Services';
 import Marquee from './components/Marquee';
 import Education from './components/Education';
+import Photography from './components/Photography';
+import PhotographyPage from './components/PhotographyPage';
+import ManagePanel from './components/ManagePanel';
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -46,11 +49,17 @@ export default function App() {
       });
   }, []);
 
-  // Hash-based simple router for separate achievements/news page
+  // Hash-based simple router
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash === '#all-achievements') {
         setCurrentPage('achievements');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (window.location.hash === '#all-photos') {
+        setCurrentPage('photography-gallery');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (window.location.hash === '#manage') {
+        setCurrentPage('manage');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         setCurrentPage('home');
@@ -61,6 +70,19 @@ export default function App() {
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  // Handle scrolling to anchor hash when returning to home view
+  useEffect(() => {
+    if (currentPage === 'home' && window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+  }, [currentPage]);
 
   useEffect(() => {
     if (loading || currentPage !== 'home') return;
@@ -123,27 +145,42 @@ export default function App() {
           </div>
         </div>
       )}
-      <Navbar profile={data.profile} />
+      {currentPage !== 'manage' && <Navbar profile={data.profile} />}
       
-      {currentPage === 'home' ? (
+      {currentPage === 'home' && (
         <main className="over-hidden">
           <Hero profile={data.profile} />
-          <Marquee />
           <About profile={data.profile} experienceCards={data.experienceCards} />
           <Services services={data.services} />
           <Experience skills={data.skills} />
-          <Education />
+          <Education education={data.education} />
           <Projects projects={data.projects} />
+          <Photography photography={data.photography} onSeeMore={() => window.location.hash = '#all-photos'} />
           <Achievements achievements={data.achievements} onSeeMore={() => window.location.hash = '#all-achievements'} />
+          <Marquee />
           <Contact contact={data.contact} />
         </main>
-      ) : (
+      )}
+
+      {currentPage === 'achievements' && (
         <main className="over-hidden achievements-page-wrapper">
           <AchievementsPage achievements={data.achievements} onBack={() => window.location.hash = '#achievements'} />
         </main>
       )}
 
-      <Footer name={data.profile.name} />
+      {currentPage === 'photography-gallery' && (
+        <main className="over-hidden photography-page-wrapper">
+          <PhotographyPage photography={data.photography} onBack={() => window.location.hash = '#photography'} />
+        </main>
+      )}
+
+      {currentPage === 'manage' && (
+        <main className="over-hidden">
+          <ManagePanel data={data} setData={setData} />
+        </main>
+      )}
+
+      {currentPage !== 'manage' && <Footer name={data.profile.name} />}
     </div>
   );
 }

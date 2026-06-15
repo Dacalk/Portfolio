@@ -24,6 +24,7 @@ export default function Navbar({ profile }) {
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Photography', href: '#photography' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Contact', href: '#contact' },
   ];

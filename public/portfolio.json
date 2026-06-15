@@ -10,8 +10,8 @@
     "bioSummary": "Hello, I'm",
     "introHeadline": "I Develop Systems that Work",
     "aboutText": "Pursuing a Computer Science degree with honors at NSBM Green University. Additionally, I am enrolled in a Higher Diploma in Software Engineering at Wayamba University, Kuliyapitiya. I am passionate about developing elegant solutions to complex engineering challenges.",
-    "profilePic": "/assets/profile-pic.jpg",
-    "aboutPic": "/assets/about-pic.jpg",
+    "profilePic": "/assets/uploads/profile-pic.png",
+    "aboutPic": "/assets/uploads/2.jpg",
     "cvUrl": "/assets/CV.pdf",
     "personalInfo": {
       "Name": "Charitha Dissanayaka",
@@ -34,7 +34,7 @@
       "id": 1,
       "title": "Exquzite  3.0",
       "category": "Events",
-          "issuer": "HR Circle of NSBM",
+      "issuer": "HR Circle of NSBM",
       "date": "June 2026",
       "images": [
         "/assets/Posts/Post 1/1720360817894.jpg",
@@ -82,22 +82,7 @@
       "fullText": "Recognized by the university council for consecutive honors list GPA standing. Validating academic dedication, software research contributions, and consistent leadership in collegiate engineering societies."
     }
   ],
-  "experienceCards": [
-    {
-      "id": "exp",
-      "title": "Experience",
-      "subtitle": "1 Year",
-      "description": "HND in Software Engineering and freelancing experience.",
-      "icon": "Briefcase"
-    },
-    {
-      "id": "edu",
-      "title": "Education",
-      "subtitle": "Undergraduate",
-      "description": "B.Sc (Hons) in Computer Science - NSBM Green University.",
-      "icon": "GraduationCap"
-    }
-  ],
+  "experienceCards": [],
   "skills": {
     "frontend": [
       {
@@ -158,7 +143,9 @@
         "JavaScript",
         "PHP",
         "MYSQL"
-      ]
+      ],
+      "category": "Business",
+      "link": "https://traveltrove.free.nf/"
     },
     {
       "id": 2,
@@ -166,7 +153,7 @@
       "description": "Developed a secure, role-based school management app with attendance tracking, MCQ modules, and a normalized 20+ table backend.",
       "image": "assets/Project/learn_x.jpg",
       "github": "https://github.com/Dacalk/Individual_LMS.git",
-      "demo": "https://github.com/Dacalk",
+      "demo": "#",
       "tech": [
         "PHP",
         "SQL",
@@ -174,7 +161,16 @@
         "HTML",
         "Tailwind-CSS",
         "JavaScript"
-      ]
+      ],
+      "tags": [
+        "PHP",
+        "SQL",
+        "Bootstrap",
+        "HTML",
+        "Tailwind-CSS",
+        "JavaScript"
+      ],
+      "link": "#"
     },
     {
       "id": 3,
@@ -182,11 +178,20 @@
       "description": "A well-known global brand of emergency roadside tire repair kits that temporarily seal flat tires so you can keep driving.",
       "image": "public/assets/Project/fix_on_go.JPG",
       "github": "https://github.com/Dacalk/FIxOnGo.git",
-      "demo": "https://github.com/Dacalk",
+      "demo": "#",
       "tech": [
         "Flutter",
-        "Google Auth",
-        "Firebase"
+        " Dart",
+        " Firebase",
+        " Firestore"
+      ],
+      "category": "",
+      "link": "#",
+      "tags": [
+        "Flutter",
+        " Dart",
+        " Firebase",
+        " Firestore"
       ]
     }
   ],
@@ -194,24 +199,87 @@
     {
       "id": 1,
       "title": "Web Design",
-      "description": "Creating visually stunning, fully responsive, and highly interactive user interfaces tailored to your specific brand identity."
+      "description": "Creating visually stunning, fully responsive, and highly interactive user interfaces tailored to your specific brand identity.",
+      "icon": "Monitor"
     },
     {
       "id": 2,
       "title": "Software Engineering",
-      "description": "Building reliable, scalable back-end logic, API servers, and system models that ensure smooth app operations."
+      "description": "Building reliable, scalable back-end logic, API servers, and system models that ensure smooth app operations.",
+      "icon": "Code"
     },
     {
       "id": 3,
       "title": "Database Solutions",
-      "description": "Designing optimized relational SQL database structures, normalization profiles, and efficient indexing strategies."
+      "description": "Designing optimized relational SQL database structures, normalization profiles, and efficient indexing strategies.",
+      "icon": "Database"
     }
   ],
   "contact": {
     "email": "charithadissanayaka5290@gmail.com",
-    "phone": "+94 77 123 4567",
+    "phone": "+94 77 302 8797",
     "location": "Kuliyapitiya, Sri Lanka",
     "linkedin": "https://www.linkedin.com/in/charitha-dissanayaka-991188318/",
     "github": "https://github.com/Dacalk"
-  }
+  },
+  "photography": [
+    {
+      "id": 1,
+      "src": "/assets/photography-1.jpg",
+      "title": "Misty Valleys",
+      "category": "Landscape",
+      "desc": "Captured amidst the lush, fog-covered mountains of the central highlands.",
+      "orientation": "landscape"
+    },
+    {
+      "id": 2,
+      "src": "/assets/photography-2.jpg",
+      "title": "Golden Sunset",
+      "category": "Horizon",
+      "desc": "A vibrant sunset casting a golden reflection over the calm waves of the sea.",
+      "orientation": "landscape"
+    },
+    {
+      "id": 3,
+      "src": "/assets/photography-3.jpg",
+      "title": "Ocean Whispers",
+      "category": "Seascape",
+      "desc": "Vivid purple and orange hues painting the sky above a solitary coastal rock formation.",
+      "orientation": "portrait"
+    },
+    {
+      "id": 4,
+      "src": "/assets/photography-1.jpg",
+      "title": "Mountain Mist",
+      "category": "Landscape",
+      "desc": "Lush pine forests rising through the thick morning fog of the valleys.",
+      "orientation": "portrait"
+    },
+    {
+      "id": 5,
+      "src": "/assets/photography-2.jpg",
+      "title": "Crimson Sky",
+      "category": "Horizon",
+      "desc": "Deep red and magenta tones setting over the calm beach line.",
+      "orientation": "landscape"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "B.Sc (Hons) in Computer Science",
+      "institution": "NSBM Green University",
+      "period": "2022 - Present",
+      "location": "Homagama, Sri Lanka",
+      "description": "Focusing on advanced computer science principles, software architecture, data structures, algorithms, and honors research projects."
+    },
+    {
+      "id": 2,
+      "degree": "Higher Diploma in Software Engineering",
+      "institution": "Wayamba University",
+      "period": "Enrolled",
+      "location": "Kuliyapitiya, Sri Lanka",
+      "description": "Specializing in software engineering disciplines, object-oriented systems development, databases, and secure programming practices."
+    }
+  ]
 }
